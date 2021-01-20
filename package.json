@@ -1,0 +1,16 @@
+{
+  "name": "nodejsanonhtmlhoster",
+  "version": "1.0.0",
+  "description": "A nodejs web application using express.js framework, intended to serve the purpose of hosting anonymous HTML documents, also with you can host separate CSS and JavaScript files into it.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Rishav Das",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}

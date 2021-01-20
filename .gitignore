@@ -1,0 +1,7 @@
+node_modules/
+tests/
+package-lock.json
+data.json
+media/html/
+media/css/
+media/js/

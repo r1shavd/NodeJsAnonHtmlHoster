@@ -1,0 +1,49 @@
+<!-- The Index page of the web application -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Linking the HTML doc with the Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+	<title>Anonymous HTML Hoster</title>
+</head>
+<body>
+	<!-- The body section of the file -->
+
+	<!-- The header (navbar) -->
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="container-fluid">
+			<span class="navbar-brand mb-0 h1">Anonymous HTML Hoster</span>
+		</div>
+	</nav>
+
+	<div class="container my-2">
+		<!-- The form for uploading a new anonymous HTML document -->
+		
+		<div class="card px-3 py-3">
+			<h3>HTML File Upload</h3>
+			<div class="form-text" id="formErrorText" style="display: none; color: red;"></div>
+			<label class="form-label" for="file-id">Enter a unique file Id (Character and numbers both)</label>
+			<input class="form-control mb-2" type="text" name="file-id" placeholder="File Id">
+
+			<!-- The input file option for choosing the HTML file -->
+			<label class="form-label" for="html-file">Type the HTML code below</label>
+			<textarea class="form-control" name="html-input" placeholder="Type the HTML data" rows="20" style="resize: none;"></textarea>
+
+			<button class="btn btn-primary my-2" id="upload-btn">Upload</button>
+		</div>
+		
+	</div>
+</body>
+
+<!-- Linking the HTML doc with the Bootstrap required JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+<!-- The custom JS for this page -->
+<script type="text/javascript" src="/js/indexpage.js"></script>
+</html>
