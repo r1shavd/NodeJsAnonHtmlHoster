@@ -99,7 +99,7 @@ app.post('/', (request, response) => {
 
 // Endpoint to listen at /:fileId
 app.get('/:fileId', (request, response) => {
-	/* The function to serve the response when there is a GET request at the /:fileId URL of the web app. */
+	/* The function to serve the response when there is a GET request at the /:fileId URL of the web app. The function loads the requested file Id (uploaded HTML file) to the web browser as per specified in the URL params. */
 
 	// Getting the data from the URL parameters
 	let fileId = request.params.fileId;
