@@ -23,8 +23,14 @@
 	</nav>
 
 	<div class="container my-2">
+		<div class="alert alert-info alert-dismissible fade show" role="alert">
+			<!-- The alert for displaying the 'Documentation Checkout' information -->
+
+			Checkout the below documentation for more help. <a href="#documentation">Click Here</a>.
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+
 		<!-- The form for uploading a new anonymous HTML document -->
-		
 		<div class="card px-3 py-3">
 			<h3>HTML File Upload</h3>
 			<div class="form-text" id="formErrorText" style="display: none; color: red;"></div>
@@ -38,6 +44,104 @@
 			<button class="btn btn-primary my-2" id="upload-btn">Upload</button>
 		</div>
 		
+		<hr>
+
+		<!-- The div where the documenation (manual) of the web application is shown to the user -->
+		<div id="documentation">
+			<h3>Help (Documentation)</h3>
+			<!-- The different topics for help section arranged in a list -->
+			<ul>
+				<li>
+					<!-- "How to use?" information -->
+					<a data-bs-toggle="collapse" href="#howToUse" role="button" aria-expanded="false" aria-controls="howToUse">How to use ?</a>
+					<div class="collapse card card-body" id="howToUse">
+						There are two input fields on the upload form. One is for entering the file Id for the upload and second textarea is for the typing of the HTML codes. Our application can host single web pages currently. You can just paste the entire code of your HTML file and then enter your file Id and upload it. After uploading has resulted in success, then we can visit the website at /file-Id.
+					</div>
+				</li>
+
+				<li>
+					<!-- "What is file Id?" information -->
+					<a data-bs-toggle="collapse" href="#whatIsFileId" role="button" aria-expanded="false" aria-controls="whatIsFileId">What is file Id ?</a>
+					<div class="collapse card card-body" id="whatIsFileId">
+						The file Id is a unique identification property for each HTML uploaded. The file Id is a string, can consist of alphabets as well as numeric characters. You can also combine uppercase and lowercase characters together. The file Id is a must neccessary, as this property for the HTML upload allows the users to access their web pages at separate URLs. Let us explain you with an example : I uploaded some HTML codes with mentioning the file Id as 'testing1', then after the uploading success, we can access our HTML code at the URL /testing1.
+					</div>
+				</li>
+
+				<li>
+					<!-- "Rules for writting a file Id" information -->
+					<a data-bs-toggle="collapse" href="#rulesForChoosingFileId" role="button" aria-expanded="false" aria-controls="rulesForChoosingFileId">Rules for choosing a file Id</a>
+					<div class="collapse card card-body" id="rulesForChoosingFileId">
+						<ul>
+							<li>The character length for a file Id must be between 5 to 25 characters.</li>
+							<li>The file Id must not contain any spaces or any special characters (not even the underscore '_')</li>
+							<li>The file Id must be unique for each upload, So it is better requested to choose a proper file Id</li>
+							<li>You can also combine uppercase and lower case alphabets togethers if you want for further more diversity.</li>
+						</ul>
+					</div>
+				</li>
+
+				<li>
+					<!-- "Adding javascript and CSS to the HTML" information -->
+					<a data-bs-toggle="collapse" href="#addingJavascriptAndCssToTheHtml" role="button" aria-expanded="false" aria-controls="addingJavascriptAndCssToTheHtml">Adding javascript and CSS to the HTML</a>
+					<div class="collapse card card-body" id="addingJavascriptAndCssToTheHtml">
+						If you wish to add javascript and CSS to your HTML document, then you can add the required javascript and CSS codes within the HTML document using the 'style' and 'script' tag. Our app currently do not supports multiple uploads of files, it can allow a single page to upload. So, you have to use the in-document javascript and CSS.
+					</div>
+				</li>
+
+				<li>
+					<!-- "What if there is an error?" information -->
+					<a data-bs-toggle="collapse" href="#whatIfThereIsAnError" role="button" aria-expanded="false" aria-controls="whatIfThereIsAnError">What if there is an error?</a>
+					<div class="collapse card card-body" id="whatIfThereIsAnError">
+						If there is an error in uploading the HTML document, first try to recheck all the steps you have gone through and then try once again to do the same process. If still the problem arises, then kindly report us at <a href="#contactUs">here</a>
+					</div>
+				</li>
+
+				<li>
+					<!-- "If you want to improve things?" information -->
+					<a data-bs-toggle="collapse" href="#ifYouWantToImproveThings" role="button" aria-expanded="false" aria-controls="ifYouWantToImproveThings">If you want to improve things?</a>
+					<div class="collapse card card-body" id="ifYouWantToImproveThings">
+						If there are any features you want to improve or add into, then you can pop in at anytime you want. This application is an open source project. The repository is available at <a href="https://github.com/rdofficial/NodeJsAnonHtmlHoster">https://github.com/rdofficial/NodeJsAnonHtmlHoster</a>
+						You can simply create a pull request there specifying your version of edits on this application. For more information, you can specify your queries via the <a href="#contactUs">contact section</a>
+					</div>
+				</li>
+
+				<li>
+					<!-- "Youtube tutorials" information -->
+					<a data-bs-toggle="collapse" href="#youtubeTutorialsInformation" role="button" aria-expanded="false" aria-controls="youtubeTutorialsInformation">Youtube Tutorials for this application</a>
+					<div class="collapse card card-body" id="youtubeTutorialsInformation">
+						The web application is intended as a project for beginners and web developement learners. The tutorials for using as well as coding the entire application is uploaded at author's youtube channel. You can access it <a href="https://www.youtube.com/channel/UCfp-xR7cpyLOXVW8MYr59WA">here</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<hr>
+
+		<!-- The HTML div where the 'Contact Us' form is present -->
+		<div id="contactUs">
+			<h3>Contact Us</h3>
+
+			<!-- The contact us form -->
+			<form method="post" action="/contact">
+				<input class="form-control mb-2" type="text" name="contact-request-title" placeholder="Title for your query">
+				<textarea class="form-control mb-2" name="contact-request-content" placeholder="Ellaborate your query" rows="3" style="resize: none;"></textarea>
+				<button class="btn btn-outline-primary" type="submit">Submit</button>
+			</form>
+		</div>
+	
+		<hr>
+
+		<!-- The HTML div where the 'About' section is present -->
+		<div id="about">
+			<h3>About</h3>
+			<p>
+				The Anonymous HTML Hoster is a web application intended for providing the feature of freely hosting HTML web pages which are intended to work as a single page application. Students who want to test their HTML and frontend codes can use this application for remote hosting of their web pages. Also people who want to share the demo working of their web page can use this tool. Currently the tool only support pasting and uploading of the HTML codes within a single page only. So, if you want to include javascript and CSS do it in the same page only.
+				<br>
+				The application is written in NodeJs (Javascript backend framework). The application is managed by Rishav Das (Github : @rdofficial). You can also contribute to this application / project. The repository is hosted at https://github.com/rdofficial/NodeJsAnonHtmlHoster. You can also create a pull request there mentioning any updates in the source. Also if you want to specify any other update or bug reports, then can contact the author at the mail rdofficial192@gmail.com
+				<br>
+				The documentation for the application is also provided at the github repository, along with the links of youtube tutorial videos. Check it out for more information.
+			</p>
+		</div>
 	</div>
 </body>
 
