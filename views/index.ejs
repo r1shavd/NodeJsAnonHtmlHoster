@@ -33,7 +33,7 @@
 		<!-- The form for uploading a new anonymous HTML document -->
 		<div class="card px-3 py-3">
 			<h3>HTML File Upload</h3>
-			<div class="form-text" id="formErrorText" style="display: none; color: red;"></div>
+			<div class="form-text" id="uploadFormErrorText" style="display: none; color: red;"></div>
 			<label class="form-label" for="file-id">Enter a unique file Id (Character and numbers both)</label>
 			<input class="form-control mb-2" type="text" name="file-id" placeholder="File Id">
 
@@ -122,10 +122,12 @@
 			<h3>Contact Us</h3>
 
 			<!-- The contact us form -->
-			<form method="post" action="/contact">
+			<form>
+				<div class="form-text" id="contactFormErrorText" style="display: none; color: red;"></div>
 				<input class="form-control mb-2" type="text" name="contact-request-title" placeholder="Title for your query">
 				<textarea class="form-control mb-2" name="contact-request-content" placeholder="Ellaborate your query" rows="3" style="resize: none;"></textarea>
-				<button class="btn btn-outline-primary" type="submit">Submit</button>
+				<input class="form-control mb-2" type="text" name="contact-request-email" placeholder="Enter your e-mail address for contact purposes">
+				<button class="btn btn-outline-primary" id="contact-submit-btn">Submit</button>
 			</form>
 		</div>
 	

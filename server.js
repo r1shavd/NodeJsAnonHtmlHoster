@@ -90,6 +90,36 @@ app.post('/', (request, response) => {
 
 		// If we get out of that try..catch... block, then there are no errors in the process
 		return response.send('success');
+	} else if (reason == 'contact') {
+		// If the reason for the POST request on this endpoint is to submit a new contact request, then we continue to complete the process
+
+		// Getting the required POST request data
+		const title = request.body.title;
+		const content = request.body.content;
+		const email = request.body.email;
+
+		try {
+			// Getting the existing data in the contactRequests.json file
+			let data = FS.readFileSync(__dirname + '/contactRequests.json');
+			data = JSON.parse(data);
+			
+			// Adding the new contact request data to the main data array
+			data.push({
+				title : title,
+				content : content,
+				email : email
+			});
+
+			// Saving the data back to the file
+			FS.writeFileSync(__dirname + '/contactRequests.json', JSON.stringify(data));
+
+			// If the processes are executed without an error, then we return an 'success' message
+			return response.send('success');
+		} catch(error) {
+			// If there are any errors raised during the process, then we return the error message back to the client side. (Note that on the client side javascript, we need proper handling of the response for this part)
+
+			return response.send(error);
+		}
 	} else {
 		// If there is no reason specified for this purpose, then we return an error to the user as a response
 
