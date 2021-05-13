@@ -19,7 +19,7 @@ uploadBtn.addEventListener('click' ,(e) => {
 	// Getting the input HTML elements from the document
 	const fileIdInput = document.querySelector('input[name="file-id"]');
 	const htmlDataInput = document.querySelector('textarea[name="html-input"]');
-	const uploadFormErrorText = document.getElementById('uploaduploadFormErrorText');
+	const uploadFormErrorText = document.getElementById('uploadFormErrorText');
 
 	// Verifying the fileIdInput
 	if (/[a-zA-Z0-9]{5,30}/.test(fileIdInput.value) && fileIdInput.value.includes(' ') == false) {

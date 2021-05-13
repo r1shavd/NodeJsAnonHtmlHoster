@@ -1,20 +1,11 @@
-# The Ignore List File for the NodeJsAuthenticationSystem
-
+# The ignore file list - Anonymous Html Hoster
+#
 # Note -
-# 1. Ignore the data files.
-# 2. Ignore the uploaded media files which are created during tests.
-# 3. Ignore the npm data files and folders like node_modules/, which can be restored using the package.json file anytime ;-).
+# 1. Ignore the development installed modules and dependencies like node_modules, package-lock.json, and tests/ folder too.
+# 2. The user uploaded files (dummy data while testing), and the other in-app stored data are cleaned before the push using the setup.sh script, so no need to ignore them. But, why do we need those files on this repository anyways. The reason is simple, we need those files as if we host our app on heroku or heroku-alike services, then we need to create blank files and folder as heroku clients automatically donot create them.
+#
 
 # Ignoring the npm data and other nodejs cache
 node_modules/
 package-lock.json
 tests/
-
-# Ignoring the data files (JSON files) which just consume space that isnt needed for a commit
-data.json
-contactRequests.json
-
-# The media files are to be ignored as they just consume space that are not neccessary
-media/html/
-media/css/
-media/js/

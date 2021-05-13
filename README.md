@@ -1,4 +1,4 @@
-# Anonymous HTML Hoster (NodeJs)
+# Anonymous HTML Hoster
 
 A HTML hoster web application written in NodeJs. The web application serves the purpose of the anonymous sharing of the HTML files over the internet without buying a domain or a hosting server. But, there is one limit to this, you can share only single page HTML files until now. This means that the application is capable of hosting the single page HTML documents until now. So, if you wish to use additional CSS or Javascript in the HTML file, then write them on the same page if possible. Below is a screenshot of the main page of the web application ![Desktop version screenshot of the application](docs/images/desktop-version-screenshot.png). If you want more details about the working of the application and want some more tutorials the visit the documentation folder [here](docs/).
 
